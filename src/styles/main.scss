@@ -1,0 +1,182 @@
+/**
+ * 主样式表
+ *
+ * @date 2019-04-29
+ * @author chenyongzheng
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #app, .wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #ffffff;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, "microsoft yahei", arial, STHeiTi, sans-serif;
+}
+
+/* 定义主颜色 */
+$main-color: #409EFF;
+
+@import "reset";
+@import "func";
+@import "common";
+
+/*-------------------- 渐变动画 --------------------*/
+.fade-enter-active, .fade-leave-active {
+    transition: opacity 1s;
+}
+
+/*-------------------- 渐变动画 --------------------*/
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+.el-menu {
+    border-right: 0;
+    text-align: left;
+
+    .is-active {
+        color: rgb(255, 208, 75) !important;
+    }
+}
+
+/* 右上角用户名称 */
+.el-link--inner {
+    color: rgb(255, 208, 75) !important;
+}
+
+.el-submenu__title {
+    text-align: left;
+}
+
+.el-form--inline {
+    .el-form-item__label {
+        width: 150px;
+    }
+
+    /* 取消时间选择器中灰色虚线 */
+    .line:before, .line:after {
+        width: 0;
+    }
+}
+
+/* 供应商form */
+.g-supplier-form {
+    .el-form-item__label {
+        width: 180px;
+    }
+}
+
+/* --------------------- 分页共通 --------------------- */
+.pagination {
+    float: right;
+    margin: 0;
+    text-align: right;
+}
+
+/*--------------------- 共通表单按钮向右 ---------------------*/
+.form-right-btn {
+    text-align: right;
+}
+
+/*--------------------- 共通dialog ---------------------*/
+.g-common-dialog {
+    /*--------------------- 共通dialog顶部文字背景色 ---------------------*/
+    .el-dialog__header {
+        background: #bfcbd9;
+    }
+
+    /*--------------------- 共通新增dialog中body ---------------------*/
+    .el-dialog__body {
+        padding: 30px 0;
+        /*--------------------- 共通新增dialog中新增form ---------------------*/
+        .g-common-dialog-form {
+            /*--------------------- 共通新增dialog中下拉框width ---------------------*/
+            .g-form-select {
+                width: 178px;
+            }
+
+            /*--------------------- 共通新增dialog中文本域width ---------------------*/
+            .g-form-textarea {
+                width: 178px;
+            }
+
+            /*--------------------- 共通新增dialog底部按钮 ---------------------*/
+            .g-form-bottom-btn {
+                display: block;
+                text-align: center;
+                padding: 22px 0 0 0;
+                border-top: 1px solid #b2b2b2;
+                margin-right: 0px;
+            }
+        }
+
+        /*--------------------- 共通新增dialog脚部 ---------------------*/
+        .el-dialog__footer {
+        }
+    }
+}
+
+.g-crud-form {
+    width: 20%;
+    margin: 0 50% 0 30%;
+
+    .g-center-btn {
+        text-align: center;
+    }
+}
+
+.c-crud-form {
+    width: 100%;
+    margin: 0 50% 0 0;
+
+    .g-center-btn {
+        text-align: center;
+    }
+
+    .editor {
+        width: 80%;
+        margin-left: -1px;
+    }
+
+    .el-input {
+        width: 50%;
+    }
+
+    .el-select {
+        width: 100%;
+    }
+}
+
+/* form中table样式 */
+.g-f-t {
+    .el-form-item__content {
+        width: 100%;
+    }
+}
+
+/* 顶部导航滚动条 */
+.tags-view-wrapper {
+    .el-scrollbar__view {
+        overflow: overlay;
+        height: 50px;
+    }
+}
+
+/* title样式 */
+.el-h2 {
+    font: bold 18px '微软雅黑';
+    padding-bottom: 22px;
+    color: $main-color;
+}
+
+/* table样式 */
+.g-table-width {
+    width: 100%;
+}
